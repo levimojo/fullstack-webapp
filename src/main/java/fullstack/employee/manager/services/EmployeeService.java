@@ -5,11 +5,12 @@ import fullstack.employee.manager.model.Employee;
 import fullstack.employee.manager.repositories.EmployeeRepo;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.attribute.UserPrincipalNotFoundException;
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class EmployeeService {
     private final EmployeeRepo employeeRepo;
 
